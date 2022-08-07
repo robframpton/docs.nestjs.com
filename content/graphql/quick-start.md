@@ -139,7 +139,13 @@ A fully working code first sample is available [here](https://github.com/nestjs/
 
 #### Schema first
 
-To use the schema first approach, start by adding a `typePaths` property to the options object. The `typePaths` property indicates where the `GraphQLModule` should look for GraphQL SDL schema definition files you'll be writing. These files will be combined in memory; this allows you to split your schemas into several files and locate them near their resolvers.
+When using the schema first approach, the optional `ts-morph` dependency must be installed for code generation.
+
+```bash
+npm i ts-morph
+```
+
+Start by adding a `typePaths` property to the options object. The `typePaths` property indicates where the `GraphQLModule` should look for GraphQL SDL schema definition files you'll be writing. These files will be combined in memory; this allows you to split your schemas into several files and locate them near their resolvers.
 
 ```typescript
 GraphQLModule.forRoot<ApolloDriverConfig>({
